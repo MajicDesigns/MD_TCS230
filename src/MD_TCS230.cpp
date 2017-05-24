@@ -317,7 +317,7 @@ void MD_TCS230::RGBTransformation(void)
 
 	for (uint8_t i=0; i<RGB_SIZE; i++)
 	{
-		x = (_Fo.value[i] - _Fd.value[i]) * 255;
+		x = (_Fo.value[i] - _Fd.value[i]) * 256;
 		x /= (_Fw.value[i] - _Fd.value[i]);
 
 		// copy results back into the global structures
