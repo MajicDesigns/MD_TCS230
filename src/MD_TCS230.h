@@ -2,7 +2,7 @@
   MD_TCS230.h - Arduino library for TCS230 Colour Sensor.
   Copyright (C) 2013 Marco Colli
   All rights reserved.
-	
+
   The TCS230 programmable color light-to-frequency converter
   combines configurable silicon photodiodes and a current-to-
   frequency converter on single CMOS integrated circuit. 
@@ -12,11 +12,11 @@
   preset values via two control input pins. 
   Output enable (OE) places the output in the high-impedance 
   state for multiple-unit sharing of a microcontroller input line.
-	
+
   This library has a dependency on the FreqCount library for 
   frequency counting. FreqCount library is available at
   http://www.pjrc.com/teensy/td_libs_FreqCount.html
-	
+
   ** IMPORTANT NOTE** 
   FreqCount imposes a limitation that the frequency can only be 
   counted on specific pins and limits the use of other pins as 
