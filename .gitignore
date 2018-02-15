@@ -11,6 +11,7 @@
 
 #Stuff
 *.zip
+doc/
 
 #Visual Studio and Atmel Studio files
 *.sln
