@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hardware',['Hardware',['../page_hardware.html',1,'index']]]
+  ['revision_20history',['Revision History',['../page_version.html',1,'index']]]
 ];

@@ -14,6 +14,8 @@ Library example code includes:
 - Example incorporating sensor calibration
 - Color learning and matching
 
+If you like and use this library please consider making a small donation using [PayPal](https://paypal.me/MajicDesigns/4USD)
+
 __IMPORTANT NOTE__
 
 This library has a dependency on the *FreqCount* library for frequency counting 
@@ -40,9 +42,7 @@ Topics
 - \subpage pageVersion
 - \subpage pageCopyright
 
-\page pageHardware Hardware
-Supported Hardware
-------------------
+\page pageHardware Supported Hardware
 This library supports the TCS230/TCS3200 color sensor and the more commonly available 
 breakout modules available from many sources. The circuits for these modules are essentially 
 identical except that the OE line may need to be modified (see below).
@@ -235,20 +235,21 @@ You should have received a copy of the GNU Lesser General Public License along w
 library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
 Boston, MA 02110-1301  USA
 
-\page pageVersion Versions
-Revision History
-----------------
-2013 version 1.0.0
-- Initial version.
+\page pageVersion Revision History
+Jul 2018 version 1.2.3
+- Updated various text files and documentation
 
-Jan 2017 version 1.1.0
-- Documentation update.
+Feb 2018 version 1.2.1, 1.2.2
+- Updated documentation to doxygen standard.
 
 Jan 2018 version 1.2.0
 - Changed scaling multiplier from 256 to 255.
 
-Feb 2018 version 1.2.1
-- Updated documentation to doxygen standard.
+Jan 2017 version 1.1.0
+- Documentation update.
+
+2013 version 1.0.0
+- Initial version.
 */
 #ifndef _MD_TCS230_H
 #define _MD_TCS230_H
