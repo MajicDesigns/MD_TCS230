@@ -236,8 +236,11 @@ library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fi
 Boston, MA 02110-1301  USA
 
 \page pageVersion Revision History
+May 2021 version 1.2.4
+- Fixed non-compliant file name.
+
 Jul 2018 version 1.2.3
-- Updated various text files and documentation
+- Updated various text files and documentation.
 
 Feb 2018 version 1.2.1, 1.2.2
 - Updated documentation to doxygen standard.
