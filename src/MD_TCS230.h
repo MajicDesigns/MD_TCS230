@@ -51,7 +51,7 @@ TCS230 IC
 ---------
 The TCS230 IC mounted in the breakout has the following pinout.
 
-![TCS230 IC Pinout] (TCS230_Hardware_Pinout.png "TCS230 IC Pinout")
+\image{inline} html TCS230_Hardware_Pinout.png "TCS230 IC Pinout"
 
 Name  |Pin |I/O|Description                                                                           |
 :----:|---:|:-:|:-------------------------------------------------------------------------------------|
@@ -66,7 +66,7 @@ The operation of the hardware falls into two major functions, shown in the figur
 different modules are controlled by setting the S0, S1, S2 and S3 pins. These settings are also shown 
 in the tables below.
 
-![TCS230 Hardware Functions] (TCS230_Hardware_Functions.png "TCS230 Hardware Functions")
+\image{inline} html TCS230_Hardware_Functions.png "TCS230 Hardware Functions"
 
 S0  |S1 |Output Freq Scaling | |S2  |S3 |Photodiode Selection  |
 :--:|--:|:-------------------| |:--:|--:|:---------------------|
@@ -78,7 +78,7 @@ H   |H  |100%                | |H   |H  |Green                 |
 TCS230 Breakout Boards
 ----------------------
 
-![TCS230 Sensor Breakout] (TCS230_Sensor_Breakout.png "TCS230 Sensor Breakout")
+\image{inline} html TCS230_Sensor_Breakout.png "TCS230 Sensor Breakout"
 
 The sensor can be purchased mounted on any number of inexpensive breakout boards, similar in 
 design to that shown above. These boards extend the package connections to header pins, and 
@@ -100,7 +100,7 @@ is found between resistors R5 and R8, highlighted by the circle in the figure be
 be different for other boards, so it is wise to follow the connections to make sure the 
 correct track is cut.
 
-![TCS230 OE Modification] (TCS230_OE_Pin_MOdification.png "TCS230 OE Modification")
+\image{inline} html TCS230_OE_Pin_MOdification.png "TCS230 OE Modification"
 
 Another modification to make the device readings consistent and repeatable is to shroud the 
 sensor. This can be made from black card, wrapped and taped to the breakout board. The shroud 
@@ -108,7 +108,7 @@ eliminates stray light and ensures all the reflected light goes back to the sens
 so that the light reflected back into the sensor does not include color components originating 
 from the shroud. My setup is shown below.
 
-![TCS230 Sensor Shroud] (TCS230_Shrouded.jpg "TCS230 Sensor Shroud")
+\image{inline} html TCS230_Shrouded.jpg "TCS230 Sensor Shroud"
 
 \page pageLibrary Using the Library
 Measuring Frequency
@@ -163,7 +163,7 @@ Calibrating the Sensor
 The output is a square wave (50% duty cycle) with frequency (f<sub>o</sub>) directly 
 proportional to light intensity:
 
-![] (TCS230_Eq1.png)
+\image{inline} html TCS230_Eq1.png
 
 where 
 
@@ -198,15 +198,15 @@ where
 - _y_ is the reading obtained (in our case f<sub>o</sub>)
 - _x_ is the normalized RGB value
 - _b_ is the value of y when x is 0 (in our case f<sub>d</sub>)
-- _m_ is the slope, or proportionality constant, of the line (in our case [_f<sub>w</sub> - f<sub>d</sub>_]/255.
+- _m_ is the slope, or proportionality constant, of the line. In our case (f<sub>w</sub> - f<sub>d</sub>)/255.
 
 The resulting equation is
 
-![] (TCS230_Eq2.png)
+\image{inline} html TCS230_Eq2.png
 
 or, rearranging to give us the desired RGB value
 
-![] (TCS230_Eq3.png)
+\image{inline} html TCS230_Eq3.png
 
 References
 ----------
@@ -236,6 +236,9 @@ library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fi
 Boston, MA 02110-1301  USA
 
 \page pageVersion Revision History
+July 2025 version 1.2.5
+- Fixed documentation errors.
+
 May 2021 version 1.2.4
 - Fixed non-compliant file name.
 
@@ -405,7 +408,7 @@ class MD_TCS230
   /**
    * Set the photodiode filter.
    *
-   * Set the outputs s0, s1 to match the specified photodiode filter.
+   * Set the outputs s2, s3 to match the specified photodiode filter.
    * This is one of the defined values TCS230_RGB_*.
    *
    * The read() method will automatically invoke all the filters in turn.
@@ -417,10 +420,10 @@ class MD_TCS230
   /**
    * Set the frequency prescaler.
    *
-   * Set the outputs s2, s3 to match the specified frequency prescaler.
+   * Set the outputs s0, s1 to match the specified frequency prescaler.
    * This is one of the defined values TCS230_FREQ_*. 
    * 
-   * Default library value is 100% prescaler (TCS23_FREQ_HI).
+   * Default library value is 100% prescaler (TCS230_FREQ_HI).
    *
    * This method will only work if the prescaler pins s2, s3 are specified
    * in the constructor and is ignored otherwise.

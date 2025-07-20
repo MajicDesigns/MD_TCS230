@@ -1,2 +1,7 @@
 <map id="src/MD_TCS230.h" name="src/MD_TCS230.h">
+<area shape="rect" id="Node000001" title="Main header file for the MD_TCS230 library." alt="" coords="35,6,163,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,81,83,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,34,63,71,59,68,88,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="107,81,200,106"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,30,138,68,134,71,106,34"/>
 </map>
